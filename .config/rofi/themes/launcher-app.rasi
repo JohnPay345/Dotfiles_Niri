@@ -1,0 +1,99 @@
+configuration {
+  modes: [ "Apps", "Accessories", "Development", "Internet", "Graphics", "Multimedia", "Office", "System", "Settings" ];
+  display-Apps: "";
+  display-Accessories: "󱌣";
+  display-Development: "";
+  display-Internet: "󰖟";
+  display-Graphics: "󰏘";
+  display-Multimedia: "󰎁";
+  display-Office: "";
+  display-System: "";
+  display-Settings: "󰖷";
+  drun-display-format: "{name}";
+  show-icons: true;
+  icon-theme: "Papirus";
+  filebrowser {
+    directories-first: true;
+    sorting-method:    "name";
+  }
+}
+
+@theme "~/.config/rofi/themes/gruvbox-dark.rasi"
+
+/* 1. Главное окно-контейнер */
+window {
+  width: 50%;
+  height: 50%;
+  anchor: center;
+  location: center;
+  border: 2px;
+  border-radius: 12px;
+}
+
+/* 2. Основной бокс внутри окна */
+mainbox {
+  orientation: horizontal;
+  background-color: transparent;
+  children: [ mode-switcher, box-right ];
+  padding: 10px;
+}
+
+box-right {
+  orientation: vertical;
+  children: [ inputbar, listview ];
+  spacing: 10px;
+  padding: 20px;
+}
+
+inputbar {
+}
+
+prompt {
+  font: "JetBrainsMono Nerd Font 14";
+  vertical-align: 0.5;
+  padding: 0 10px 0 0;
+  colon: "";
+}
+
+entry {
+  font: "JetBrainsMono 14";
+  vertical-align: 0.5;
+  placeholder: "Поиск...";
+}
+
+listview {
+  background-color: transparent;
+  layout: vertical;
+  spacing: 15px;
+  scrollbar: true;
+}
+
+mode-switcher {
+  orientation: vertical;
+  width: 80px;
+  border: none;
+}
+
+button {
+  padding: 20px;
+  horizontal-align: 0.4;
+  border-radius: 6px;
+  font: "JetBrainsMono NF 14";
+}
+
+element {
+  padding: 10px 0px;
+  border-radius: 8px;
+}
+
+element-icon {
+  enabled: true;
+  size: 14;
+  margin: 0 10px;
+}
+
+element-text {
+  font: "JetBrainsMono NF";
+  vertical-align: 0.4;
+}
+

@@ -1,0 +1,62 @@
+configuration {
+  show-icons: false;
+}
+
+/* 1. Главное окно-контейнер */
+window {
+  width: 870px;
+  anchor: center;
+  location: center;
+  border: 2px;
+  border-radius: 12px;
+  border-color: #3b4252;
+  background-color: #2e3440;
+}
+
+/* 2. Основной бокс внутри окна */
+mainbox {
+  background-color: transparent;
+  children: [ listview ];
+  padding: 10px;
+}
+
+/* 3. Отключаем строку ввода и подсказки */
+inputbar {
+  enabled: false;
+}
+
+/* 4. Настройка сетки элементов */
+listview {
+  background-color: transparent;
+  layout:horizontal;
+  spacing: 15px;
+  scrollbar: false;
+}
+
+/* 5. Настройка самой кнопки (Элемента) */
+element {
+  background-color: #3b4252;
+  text-color: #d8dee9;
+  padding: 20px 0px;
+  border-radius: 8px;
+  width: 200px;
+}
+
+/* Стили при наведении или выборе клавиатурой */
+element selected {
+  background-color: #88c0d0;
+  text-color: #2e3440;
+}
+
+/* Центрируем текст и иконки внутри кнопки */
+element-icon {
+  enabled: false;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  font: "JetBrainsMono NF 64";
+  horizontal-align: 0.4;
+}
+

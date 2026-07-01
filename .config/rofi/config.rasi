@@ -1,0 +1,32 @@
+configuration {
+  modes: [ "Apps", "Accessories", "Development", "Internet", "Graphics", "Multimedia", "Office", "System", "Settings" ];
+  display-Apps: "";
+  display-Accessories: "󱌣";
+  display-Development: "";
+  display-Internet: "󰖟";
+  display-Graphics: "󰏘";
+  display-Multimedia: "󰎁";
+  display-Office: "";
+  display-System: "";
+  display-Settings: "󰖷";
+  location: 0;
+  show-icons: true;
+  terminal: "ghostty";
+  icon-theme: "Papirus";
+  drun-display-format: "{name}";
+  timeout {
+    action: "kb-cancel";
+    delay:  0;
+  }
+  filebrowser {
+    directories-first: true;
+    sorting-method:    "name";
+  }
+}
+
+@theme "~/.config/rofi/themes/gruvbox-dark.rasi"
+
+mainbox {
+  children: [ inputbar, listview, mode-switcher ];
+}
+
