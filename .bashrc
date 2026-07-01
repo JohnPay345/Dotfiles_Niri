@@ -1,7 +1,7 @@
 # Алиасы
-alias ls='eza --icons=always --color-scale --group-directories-first'
-alias ll='eza -lbF --icons=always --color-scale --group-directories-first --git'
-alias la='eza -labF --icons=always --color-scale --group-directories-first --git'
+alias ls='eza --icons=always --group-directories-first'
+alias ll='eza -lbF --icons=always --group-directories-first --git'
+alias la='eza -labF --icons=always --group-directories-first --git'
 alias lt='eza --tree --level=2 --icons=always'
 alias ltl='eza -lbF --tree --level=2 --icons=always --git'
 
