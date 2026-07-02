@@ -4,6 +4,7 @@ alias ll='eza -lbF --icons=always --group-directories-first --git'
 alias la='eza -labF --icons=always --group-directories-first --git'
 alias lt='eza --tree --level=2 --icons=always'
 alias ltl='eza -lbF --tree --level=2 --icons=always --git'
+alias update-grub="sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub_arch && sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
   . /usr/share/bash-completion/bash_completion
