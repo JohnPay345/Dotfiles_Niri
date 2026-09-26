@@ -83,3 +83,7 @@ EDITOR=nvim
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+
+# Собственные пути
+export DOTNET_ROOT=/usr/share/dotnet
+export PATH=$PATH:$HOME/.dotnet/tools

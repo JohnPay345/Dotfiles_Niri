@@ -6,6 +6,7 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+      "custom/power",
       "niri/workspaces",
       "sway/mode",
       "sway/scratchpad",
@@ -19,16 +20,12 @@
       "network",
       "power-profiles-daemon",
       "pulseaudio",
-      "cpu",
-      "memory",
-      "temperature",
       "custom/clipboard",
-      "custom/notification",
       "backlight",
       "keyboard-state",
       "niri/language",
       "battery",
-      "custom/power"
+      "custom/notification"
     ],
     // Modules configuration
     // "sway/workspaces": {
@@ -161,17 +158,11 @@
       }
     },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -201,16 +192,9 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "custom/power": {
-      "format" : "⏻ ",
+      "format" : "󰣇",
       "tooltip": false,
-      "menu": "on-click",
       "on-click": "~/.config/rofi/scripts/power-menu.sh",
-      "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-      "menu-actions": {
-        "shutdown": "shutdown",
-        "reboot": "reboot",
-        "suspend": "systemctl suspend"
-      }
     },
     "custom/clipboard": {
       "format": "",
