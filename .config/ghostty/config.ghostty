@@ -1,0 +1,41 @@
+# Установка шрифта
+font-family = "JetBrainsMono NF Regular"
+font-size = 12
+
+# Тонкая настройка рендеринга
+font-thicken = false
+
+# Оптимальное сглаживание для GTK/Freetype
+freetype-load-flags = light
+
+# Настройка темы
+theme = Everforest Dark Hard
+
+# Опционально: прозрачность (0.0 - полностью прозрачный, 1.0 - монолитный)
+background-opacity = 0.95
+background-blur = true
+
+# Отключаем рамки окна
+window-decoration = false
+
+# Включаем автоматическую интеграцию с Bash (нужна для отслеживания команд)
+shell-integration = bash
+
+# Сохранять размеры и положение сплитов при перезапуске
+window-save-state = always
+
+# Курсор
+cursor-style = block
+cursor-style-blink = true
+
+# По умолчанию используются Ctrl+Shift для Linux. Переопределим основные:
+keybind = ctrl+shift+e=new_split:right
+keybind = ctrl+shift+o=new_split:down
+keybind = ctrl+shift+w=close_surface
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
+# Быстрый скролл
+keybind = shift+page_up=scroll_page_up
+keybind = shift+page_down=scroll_page_down
+
