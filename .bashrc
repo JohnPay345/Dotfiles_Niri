@@ -87,3 +87,8 @@ eval "$(fzf --bash)"
 # Собственные пути
 export DOTNET_ROOT=/usr/share/dotnet
 export PATH=$PATH:$HOME/.dotnet/tools
+
+# Настройка keychain для SSH
+if [[ $- == *i* ]]; then
+  eval $(keychain --eval --agents ssh git_key)
+fi
